@@ -2,26 +2,26 @@ import { useEffect, useState } from "react";
 import { RESTAURANT_LIST_URL } from "./constants";
 
 function useRestaurantCardData() {
-    const [restautantData, setRestaurantData] = useState([]);
+    const [carouselData, setRestaurantData] = useState({});
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const data = await fetch(RESTAURANT_LIST_URL);
                 const jsonData = await data.json();
-                // const carouselData = jsonData?.data?.cards[0]?.card?.card
-                const restaurantList = jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-                console.log(restaurantList);
-                setRestaurantData(restaurantList);
+                const carousel = jsonData?.data?.cards[0]?.card?.card
+                console.log(carousel);
+
+                setRestaurantData(carousel);
             } catch (error) {
-                console.log("Failed to Fetch Restaurant List", error)   
+                console.log("Failed to Fetch Restaurant List", error);   
             }
         }
         fetchData();
     }, []);
 
     
-    return restautantData;
+    return carouselData;
 }   
 
 export default useRestaurantCardData;
