@@ -21,7 +21,7 @@ const ResraurantMenu = () => {
     ));
 
     return  (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center mt-52 md:m-12">
             <div className="m-4 p-2 shadow-lg rounded-md text-left bg-gradient-to-r from-gray-100 to-gray-200">
                 <h1 className="text-3xl font-semibold text-gray-600/100">{name}</h1>
                 <h3 className="text-md mt-2 text-gray-700">{cuisines.join(", ")} - {costForTwoMessage}</h3>

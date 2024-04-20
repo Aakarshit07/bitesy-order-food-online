@@ -36,8 +36,6 @@ const Body = () => {
 }
 export default Body;
 
-
-
 /* 
   const [filteredRestaurantList, setFilteredRestaurantList] = useState([]);
   const [searchText, setSearchText] = useState("");
