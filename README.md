@@ -56,3 +56,11 @@
     @tailwind components;
     @tailwind utilities;
 ```
+
+## Demo Images
+
+![Home Preview](https://github.com/Aakarshit07/bitesy-order-food-online/blob/main/src/assets/home.png?raw=true)
+
+![Menu Preview](https://github.com/Aakarshit07/bitesy-order-food-online/blob/main/src/assets/menu.png?raw=true)
+
+![Cart Preview](https://github.com/Aakarshit07/bitesy-order-food-online/blob/main/src/assets/cart.png?raw=true)
