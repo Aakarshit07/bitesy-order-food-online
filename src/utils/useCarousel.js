@@ -7,7 +7,11 @@ function useRestaurantCardData() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await fetch(RESTAURANT_LIST_URL);
+                const data = await fetch("https://proxy.cors.sh/"+RESTAURANT_LIST_URL, {
+                    headers: {
+                        "x-cors-api-key": "temp_fefa7c5e73b4f9291612e290cf337b9d"
+                    }
+                });
                 const jsonData = await data.json();
                 const carousel = jsonData?.data?.cards[0]?.card?.card
                 console.log(carousel);

@@ -8,8 +8,6 @@ import ResraurantMenu from "./pages/RestaurantMenu.jsx";
 import Cart from "./pages/Cart.jsx";
 import Home from "./pages/Home.jsx";
 
-
-
 export const appRoutes = createBrowserRouter([
     {
       path: "/",
