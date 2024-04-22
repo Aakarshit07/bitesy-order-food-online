@@ -9,7 +9,7 @@ function useRestaurantMenu(resId) {
             try {
                const data = await fetch("https://proxy.cors.sh/"+MENU_URL+resId, {
                     headers: {
-                        "x-cors-api-key": "temp_fefa7c5e73b4f9291612e290cf337b9d"
+                        "x-cors-api-key": import.meta.env.VITE_API_KEY
                     }   
                });
                const json = await data.json();
