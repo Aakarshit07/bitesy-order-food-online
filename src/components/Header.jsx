@@ -24,7 +24,7 @@ const Header = () => {
       <nav className="flex items-center justify-between h-20 px-12">
         <Link to="/"><img src={Logo} alt="Bitesy" className="w-28"/></Link>
         {isOpen && <div className={`absolute top-[80px] left-0 bg-neutral-100 w-full flex flex-col items-center gap-4 py-2 md:static md:flex-row md:items-center md:justify-between`}>
-          <div className="flex items-center md:flex-row gap-4 sm:w-1/2">
+          <div className="flex flex-col items-center md:flex-row gap-4 sm:w-1/2">
             <div className="flex justify-between items-center bg-black/75 border-neutral-300 p-1 w-1/2 m-1 rounded-md shadow-xl">
               <input 
                 className="p-1 mr-2 w-full rounded-sm bg-transparent text-white placeholder:text-white outline-none rounded-r-none border-neutral-1000" 
@@ -34,13 +34,15 @@ const Header = () => {
               />
               <Search color="#ffffff" absoluteStrokeWidth className="mr-1"/>  
             </div>
-            <div>
-              <button className="font-mono text-lg w-14 h-[37px] bg-black text-white rounded-md shadow-xl text-center">
-                <Link to="/">Home</Link>
-              </button>
-            </div>
-            <div>
-              {onlineStatus === true ? <Wifi color="#000000" size={30} absoluteStrokeWidth /> : <WifiOff color="#000000" size={28} absoluteStrokeWidth />}
+            <div className="flex justify-between items-center gap-4 my-2">
+              <div>
+                <button className="font-mono text-lg w-14 h-[37px] bg-black text-white rounded-md shadow-xl text-center">
+                  <Link to="/">Home</Link>
+                </button>
+              </div>
+              <div>
+                {onlineStatus === true ? <Wifi color="#000000" size={30} absoluteStrokeWidth /> : <WifiOff color="#000000" size={28} absoluteStrokeWidth />}
+              </div>
             </div>
           </div>         
           <div className="flex justify-center items-center gap-4 ">  

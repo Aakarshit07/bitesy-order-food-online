@@ -4,7 +4,7 @@ class About extends React.Component {
     constructor(props){
         super(props)
     }
-
+    
     render () {
         return (
             <div className="flex flex-col items-center p-4 mt-52 md:my-4">

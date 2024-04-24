@@ -5,6 +5,7 @@ import Carousel from "../components/Carousel.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchRestaurantDataThunk } from "../slices/dataSlice.js";
+import Shimmer from "../components/Shimmer.jsx";
 
 const Body = () => {
   const onlineStatus = useOnlineStatus();
@@ -16,6 +17,7 @@ const Body = () => {
   }, [dispatch])
 
   //Todo: Add shimmer effect
+
   if(onlineStatus === false) {
     return <h1>Looks like you&apos;r offline, Please check your internet connection.</h1>
   }
@@ -28,7 +30,7 @@ const Body = () => {
 
       <div className="flex flex-wrap items-center justify-center gap-12 m-4 p-4">
         {
-          filteredRestaurants &&
+          filteredRestaurants.length === 0 ? <><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /></>  : 
           filteredRestaurants.map((card) => (
             <Link key={card.info.id} to={"/restaurants/" + card?.info?.id}>
               <RestaurantCard resData={card} />
