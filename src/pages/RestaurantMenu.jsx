@@ -12,7 +12,7 @@ const ResraurantMenu = () => {
     const [showIndex, setShowIndex] = useState(0);
     const resInfo = useRestaurantMenu(resId);
     
-    if(resInfo === null) return <Shimmer />;
+    if(resInfo === null) return <h1>Loading...</h1>;
     
     const { name, costForTwoMessage, cuisines } = resInfo?.cards[2]?.card?.card?.info || {};
     const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
@@ -27,8 +27,8 @@ const ResraurantMenu = () => {
                 <h3 className="text-md mt-2 text-gray-700">{cuisines.join(", ")} - {costForTwoMessage}</h3>
             </div>
             <div className="w-8/12">
-                {categories.map((category, index) =>
-                    <RestaurantMenuCategory 
+                {categories && categories.map((category, index) =>
+                    <RestaurantMenuCategory
                         key={category?.card?.card?.title} 
                         data={category?.card?.card}
                         isMenuOpen={index === showIndex ? true : false }

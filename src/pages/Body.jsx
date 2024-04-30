@@ -11,8 +11,10 @@ const Body = () => {
   const onlineStatus = useOnlineStatus();
   const dispatch = useDispatch();
   const filteredRestaurants = useSelector((state) => state.cardData.filteredRestaurants);
-  
-  useEffect(() => {
+  const loading = useSelector((state) => state.cardData.loading);
+
+
+  useEffect(() => { 
     dispatch(fetchRestaurantDataThunk());
   }, [dispatch])
 
@@ -29,9 +31,9 @@ const Body = () => {
       </div>
 
       <div className="flex flex-wrap items-center justify-center gap-12 m-4 p-4">
-        {
-          filteredRestaurants.length === 0 ? <><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /></>  : 
-          filteredRestaurants.map((card) => (
+        { 
+          loading ? <><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /></>  : 
+          filteredRestaurants && filteredRestaurants.map((card) => (
             <Link key={card.info.id} to={"/restaurants/" + card?.info?.id}>
               <RestaurantCard resData={card} />
             </Link>

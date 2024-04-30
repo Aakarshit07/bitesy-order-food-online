@@ -4,6 +4,7 @@ import { RESTAURANT_LIST_URL } from "../utils/constants";
 const initialState = {
     restaurants: [],
     filteredRestaurants: [],
+    loading: false, 
     searchTerm: "",
 }
 
@@ -39,13 +40,22 @@ const dataSlice = createSlice({
         },
     },
     extraReducers: (builder) => {
-        builder.addCase(fetchRestaurantDataThunk.fulfilled, (state, action) => {
+        builder.addCase(fetchRestaurantDataThunk.pending, (state, action) => {
+            state.loading = true;
+            console.log("hello from thunk: ", state.loading = true);
+
+        })
+        .addCase(fetchRestaurantDataThunk.fulfilled, (state, action) => {
             state.restaurants = action.payload;
             state.filteredRestaurants = action.payload;
+            state.loading = false;
+            console.log("hello from thunk: ", state.loading = false);
             console.log("Restaurant Data fetched successfully: ", action.payload);
         })
         .addCase(fetchRestaurantDataThunk.rejected, (state, action) => {
-            console.log("Failed to fetch restautant data", action.error);
+            state.loading = false;
+            console.log("hello from thunk: ", state.loading = false);
+            console.log("Failed to fetch restautant data: ", action.error);
         });
     },
 });
