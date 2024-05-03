@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useParams } from "react-router-dom";
-import Shimmer from "../components/Shimmer.jsx";
+import { Loading } from '../components/Shimmer.jsx';
 import useRestaurantMenu from "../utils/useRestaurauntMenuData.js";
 import RestaurantMenuCategory from '../components/RestaurantMenuCategory.jsx';
 
@@ -12,7 +12,7 @@ const ResraurantMenu = () => {
     const [showIndex, setShowIndex] = useState(0);
     const resInfo = useRestaurantMenu(resId);
     
-    if(resInfo === null) return <h1>Loading...</h1>;
+    if(resInfo === null) return <Loading />;
     
     const { name, costForTwoMessage, cuisines } = resInfo?.cards[2]?.card?.card?.info || {};
     const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
