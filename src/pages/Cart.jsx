@@ -21,7 +21,7 @@ function Cart() {
             </div>
         )
     }
-    
+
     return (
         <div className="w-6/12 mx-auto mt-52 md:my-4">
             <div className="p-4 rounded-md my-4 shadow-lg bg-gradient-to-r from-gray-200 to-gray-400">

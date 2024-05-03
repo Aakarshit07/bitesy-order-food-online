@@ -5,7 +5,6 @@ import appStore from "./appStore"
 import { appRoutes } from "./routes"
 
 function App() {
-
   return (
     <>
       <Provider store={appStore}>

@@ -7,14 +7,10 @@ function useRestaurantMenu(resId) {
     useEffect(() => {
         const fetchData = async () => {
             try {
-               const data = await fetch("https://proxy.cors.sh/"+MENU_URL+resId, {
-                    headers: {
-                        "x-cors-api-key": import.meta.env.VITE_API_KEY
-                    }   
-               });
-               const json = await data.json();
-            // console.log("Hook of menu list",json?.data);
-               setResInfo(json?.data);
+               const data = await fetch(MENU_URL+resId);
+               const jsonData = await data.json();
+               const actualData = await JSON.parse(jsonData.contents);
+               setResInfo(actualData?.data);
             } catch (error) {   
                 console.log("Error Fetching Data: ", error);
             }

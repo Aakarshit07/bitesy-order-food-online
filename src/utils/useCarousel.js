@@ -7,15 +7,12 @@ function useRestaurantCardData() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await fetch("https://proxy.cors.sh/"+RESTAURANT_LIST_URL, {
-                    headers: {
-                        "x-cors-api-key": import.meta.env.VITE_API_KEY
-                    }
+                const data = await fetch(RESTAURANT_LIST_URL, {
                 });
                 const jsonData = await data.json();
-                const carousel = jsonData?.data?.cards[0]?.card?.card
-                console.log(carousel);
-
+                const actualData = await JSON.parse(jsonData.contents);
+                console.log("actualData: ", actualData);
+                const carousel = actualData?.data?.cards[0]?.card?.card
                 setRestaurantData(carousel);
             } catch (error) {
                 console.log("Failed to Fetch Restaurant List", error);   

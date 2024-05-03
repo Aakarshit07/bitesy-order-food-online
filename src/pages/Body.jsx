@@ -29,8 +29,7 @@ const Body = () => {
       <div className="flex justify-start items-center gap-4 m-4 px-10 py-4">
         <Carousel />
       </div>
-
-      <div className="flex flex-wrap items-center justify-center gap-12 m-4 p-4">
+      <div className="flex flex-wrap items-center justify-center gap-12 p-4">
         { 
           loading ? <><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /></>  : 
           filteredRestaurants && filteredRestaurants.map((card) => (
