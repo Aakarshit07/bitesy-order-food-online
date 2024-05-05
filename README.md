@@ -17,7 +17,7 @@
 3. install dependencies
 
 ```
-    npm install @reduxjs/toolkit lucide-react react react-dom react-redux react-router-dom swiper 
+    npm install @reduxjs/toolkit lucide-react react react-dom react-redux react-router-dom 
 ```
 
 4. run the server
