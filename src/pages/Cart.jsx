@@ -1,17 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import MenuItemsList from "../components/MenuItemsList";
-import { clearCart } from "../slices/cartSlice.js";
+import { clearCart, } from "../slices/cartSlice.js";
 
 function Cart() {
 
     const dispatch = useDispatch()
-    const cartItemsValue = useSelector((store) => store.cart.items);
+    let cartItemsValue = useSelector((store) => store.cart.items);
     
     const handleClearCart = () => {
         dispatch(clearCart());
     }
-    
+
     if(cartItemsValue.length === 0) {
         return (
             <div className="m-4 p-4 text-center mt-52 md:my-20">
@@ -56,6 +56,7 @@ function Cart() {
                         <div className="mt-4">
                             <button
                                 className="relative w-full h-10 border-2 my-6 border-green-500 border-collapse text-black font-bold overflow-hidden bg-white rounded-lg transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-green-500 before:to-green-300 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-md hover:before:left-0"
+                                onClick={handleClearCart}
                             >
                             <Link to="/thankyou">Proceed to Checkout!</Link>
                             </button>
