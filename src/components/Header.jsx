@@ -36,7 +36,7 @@ const Header = () => {
             </div>
             <div className="flex justify-between items-center gap-4 my-2">
               <div>
-                <button className="font-mono text-lg w-14 h-[37px] bg-black text-white rounded-md shadow-xl text-center">
+                <button className="font-mono w-12 h-[37px] text-lg bg-black text-white rounded-md shadow-xl text-center">
                   <Link to="/">Home</Link>
                 </button>
               </div>

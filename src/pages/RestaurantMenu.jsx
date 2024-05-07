@@ -12,7 +12,7 @@ const ResraurantMenu = () => {
     const [showIndex, setShowIndex] = useState(0);
     const resInfo = useRestaurantMenu(resId);
     
-    if(resInfo === null) return <Loading />;
+    if(resInfo === null) return <Loading/>;
     
     const { name, costForTwoMessage, cuisines } = resInfo?.cards[2]?.card?.card?.info || {};
     const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(

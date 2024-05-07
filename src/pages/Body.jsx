@@ -16,6 +16,7 @@ const Body = () => {
 
   useEffect(() => { 
     dispatch(fetchRestaurantDataThunk());
+    return () => {};
   }, [dispatch])
 
   //Todo: Add shimmer effect

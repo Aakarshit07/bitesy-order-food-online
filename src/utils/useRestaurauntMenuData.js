@@ -10,6 +10,7 @@ function useRestaurantMenu(resId) {
                const data = await fetch(MENU_URL+resId);
                const jsonData = await data.json();
                const actualData = await JSON.parse(jsonData.contents);
+               console.log("Menu: ", data);
                setResInfo(actualData?.data);
             } catch (error) {   
                 console.log("Error Fetching Data: ", error);
@@ -20,7 +21,6 @@ function useRestaurantMenu(resId) {
         return () => {};
     }, [resId]);
 
-    
     return resInfo;
 }
 export default useRestaurantMenu;

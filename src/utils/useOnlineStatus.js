@@ -9,7 +9,9 @@ function useOnlineStatus() {
         })
         window.addEventListener("online", () => {
             setOnlineStatus(true);
-        })
+        });
+
+        return () => {};
     }, [])
 
     //returns the boolean value.
