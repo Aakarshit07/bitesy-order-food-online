@@ -46,20 +46,20 @@ function MenuItemsList ({data}) {
                             {getItemQuanitity(item.card.info.id) > 0 ? (
                                 <div className="flex justify-between items-center w-full gap-1">
                                     <button
-                                        className="relative px-1  md:py-2 md:px-4  text-black text-base font-bold overflow-hidden bg-green-400 rounded-lg transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-green-500 before:to-green-300 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-lg hover:before:left-0"
+                                        className="relative px-1 text-center hidden lg:block md:py-2 md:px-4 text-black text-base font-bold overflow-hidden bg-green-400 rounded-lg transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-green-500 before:to-green-300 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-lg hover:before:left-0"
                                         onClick={() => handleDecreaseQuanitity(item)}
                                     >
                                         -
                                     </button>
-                                    <span className="px-4 py-2 bg-white font-mono font-semibold rounded-md hidden md:block">{getItemQuanitity(item.card.info.id)}</span>
+                                    <span className="hidden lg:block px-4 py-2 bg-white font-mono font-semibold rounded-md">{getItemQuanitity(item.card.info.id)}</span>
                                     <button
-                                        className="relative md:py-2 md:px-4 hidden md:block text-black text-base font-bold overflow-hidden bg-green-400 rounded-lg transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-green-500 before:to-green-300 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-lg hover:before:left-0"
+                                        className="relative md:py-2 text-center md:px-4 hidden lg:block text-black text-base font-bold overflow-hidden bg-green-400 rounded-lg transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-green-500 before:to-green-300 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-lg hover:before:left-0"
                                         onClick={() => handleIncreaseQuanitity(item)}
                                     >
                                     +
                                     </button>
                                     <button
-                                        className="relative px-1 md:py-2 md:px-4 text-black text-base font-bold overflow-hidden bg-red-400 rounded-lg transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-red-500 before:to-red-300 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-lg hover:before:left-0"
+                                        className="relative px-4 text-center md:py-2 md:px-4 text-black text-base font-bold overflow-hidden bg-red-400 rounded-lg transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-red-500 before:to-red-300 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-lg hover:before:left-0"
                                         onClick={() => handleRemoveFormCart(item)}
                                     >
                                         x
@@ -68,7 +68,7 @@ function MenuItemsList ({data}) {
                             ) : (
                             <div className="flex items-center justify-center">
                                 <button
-                                    className="relative md:py-2 md:px-4 text-black text-base font-bold overflow-hidden bg-green-400 rounded-md transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-green-500 before:to-green-300 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-md hover:before:left-0"
+                                    className="relative md:py-2 md:px-4 text-center text-black text-base font-bold overflow-hidden bg-green-400 rounded-md transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-green-500 before:to-green-300 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-md hover:before:left-0"
                                     onClick={() => handleAddToCart(item)}
                                 >
                                 Add+

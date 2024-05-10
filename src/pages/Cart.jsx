@@ -5,6 +5,7 @@ import { clearCart, } from "../slices/cartSlice.js";
 
 function Cart() {
 
+
     const dispatch = useDispatch()
     let cartItemsValue = useSelector((store) => store.cart.items);
     
@@ -51,7 +52,7 @@ function Cart() {
                     <div className="p-2">
                         <div className="mt-4">
                             <p className="font-mono font-semibold my-1">Total Cart Item: {cartItemsValue.length}</p>
-                            <p className="font-mono font-semibold my-1">Final Amount: {cartItemsValue.reduce((total, item) => total + (item.card.info.price || item.card.info.defaultPrice) * item.quantity, 0) / 100} </p>
+                            <p className="font-mono font-semibold my-1">Final Amount:₹ {cartItemsValue.reduce((total, item) => total + (item.card.info.price || item.card.info.defaultPrice) * item.quantity, 0) / 100} </p>
                         </div>
                         <div className="mt-4">
                             <button
