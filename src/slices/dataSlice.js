@@ -15,7 +15,7 @@ export const fetchRestaurantDataThunk = createAsyncThunk("data/fetchRestaurantCa
             const data = await fetch(RESTAURANT_LIST_URL);
             const jsonData = await data.json();
             const actualData = await JSON.parse(jsonData.contents);
-            console.log("Cards: ", actualData);
+            // console.log("Cards: ", actualData);
             const restaurantList = actualData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
             return restaurantList;
         } catch (error) {
@@ -23,7 +23,6 @@ export const fetchRestaurantDataThunk = createAsyncThunk("data/fetchRestaurantCa
         }
     }
 );
-
 
 const dataSlice = createSlice({
     name: "data",
@@ -34,6 +33,18 @@ const dataSlice = createSlice({
             state.filteredRestaurants = state.restaurants.filter((restaurant) => 
                 restaurant.info.name.toLowerCase().includes(action.payload.toLowerCase().trim())
             );
+        },
+        filterAll: (state) => {
+            state.filteredRestaurants = state.restaurants;
+        },
+        filterTopRated: (state) => { 
+            state.filteredRestaurants = state.restaurants.filter((item) => item.info.avgRating >= 4.5)
+        },
+        filterFastDelivery: (state) => { 
+            state.filteredRestaurants = state.restaurants.filter((item) => item.info.sla.deliveryTime <= 30)
+        },
+        filterPureVeg: (state) => { 
+            state.filteredRestaurants = state.restaurants.filter((item) => item.info.veg === true)
         },
     },
     extraReducers: (builder) => {
@@ -51,7 +62,5 @@ const dataSlice = createSlice({
     },
 });
 
-export const { updateSearchTerm } = dataSlice.actions;
+export const { updateSearchTerm, filterAll, filterTopRated, filterFastDelivery, filterPureVeg } = dataSlice.actions;
 export default dataSlice.reducer;
-
-//TODO: Add filters 

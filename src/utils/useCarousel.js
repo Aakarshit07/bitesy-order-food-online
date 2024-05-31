@@ -11,7 +11,7 @@ function useRestaurantCardData() {
                 });
                 const jsonData = await data.json();
                 const actualData = await JSON.parse(jsonData.contents);
-                console.log("actualData: ", actualData);
+                // console.log("actualData: ", actualData);
                 const carousel = actualData?.data?.cards[0]?.card?.card
                 setRestaurantData(carousel);
             } catch (error) {
