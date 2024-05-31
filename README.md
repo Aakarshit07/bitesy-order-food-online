@@ -16,17 +16,29 @@
 
 Here's what Bitesy offers:
 **Search and Filter**: Easily find your favorite restaurants and dishes.
+
 **Cart and Checkout**: Add items to your cart and seamlessly proceed to checkout.
+
 **Shimmer UI**: Enjoy a modern, skeleton loading effect for better UX.
+
 **Responsive Design**: Access the app effortlessly on any device.
+
 **Carousel**: Browse through featured items and deals with a sleek carousel.
+
 **Restaurant Pages**: Explore individual restaurant pages with category-wise accordion menus.
-🤔 How to use Bitesy?
+
+## 🤔 How to use Bitesy?
+
 **Search for Restaurants**: Use the search bar to find specific restaurants or dishes.
+
 **Filter Results**: Apply filters to narrow down your choices based on cuisine, ratings, etc.
+
 **View Restaurant Menu**: Click on a restaurant to view its detailed menu categorized by type.
+
 **Add to Cart**: Select items and add them to your cart.
+
 **Checkout**: Review your cart and proceed to secure checkout.
+
 **Enjoy Your Meal**: Await your delicious meal to be delivered to your doorstep!
 
 > ℹ️ Tip:
