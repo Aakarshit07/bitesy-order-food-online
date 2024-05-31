@@ -8,7 +8,7 @@ function RestaurantMenuCategory({data, isMenuOpen, setShowIndex}) {
     }
 
     return (
-        <div className="my-4 rounded-md">
+        <div className="m-4 rounded-md">
             <div className="bg-gradient-to-r from-gray-100 to-gray-300 shadow-md flex justify-between p-4 rounded" onClick={handleOnClick}>
                 <h3 className='font-bold'>{data.title} ({data.itemCards.length})</h3>
                 { isMenuOpen 

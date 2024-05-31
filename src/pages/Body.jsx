@@ -19,7 +19,6 @@ const Body = () => {
     return () => {};
   }, [dispatch])
 
-  //Todo: Add shimmer effect
 
   if(onlineStatus === false) {
     return <h1>Looks like you&apos;r offline, Please check your internet connection.</h1>
@@ -30,14 +29,26 @@ const Body = () => {
       <div className="flex justify-start items-center gap-4 m-4 px-10 py-4">
         <Carousel />
       </div>
+      
       <div className="flex flex-wrap items-center justify-center gap-12 p-4">
         { 
-          loading ? <><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /><Shimmer /></>  : 
-          filteredRestaurants && filteredRestaurants.map((card) => (
+          loading ? (
+            <>
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            </>
+          ) : (
+            filteredRestaurants && filteredRestaurants.map((card) => (
             <Link key={card.info.id} to={"/restaurants/" + card?.info?.id}>
               <RestaurantCard resData={card} />
             </Link>
-          ))
+          )))
         }  
       </div>
     </div>
