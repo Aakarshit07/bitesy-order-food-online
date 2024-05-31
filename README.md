@@ -15,34 +15,28 @@
 ## ✨ Features
 
 Here's what Bitesy offers:
-**Search and Filter**: Easily find your favorite restaurants and dishes.
-
-**Cart and Checkout**: Add items to your cart and seamlessly proceed to checkout.
-
-**Shimmer UI**: Enjoy a modern, skeleton loading effect for better UX.
-
-**Responsive Design**: Access the app effortlessly on any device.
-
-**Carousel**: Browse through featured items and deals with a sleek carousel.
-
-**Restaurant Pages**: Explore individual restaurant pages with category-wise accordion menus.
+- **Search and Filter**: Easily find your favorite restaurants and dishes.
+- **Cart and Checkout**: Add items to your cart and seamlessly proceed to checkout.
+- **Shimmer UI**: Enjoy a modern, skeleton loading effect for better UX.
+- **Responsive Design**: Access the app effortlessly on any device.
+- **Carousel**: Browse through featured items and deals with a sleek carousel.
+- **Restaurant Pages**: Explore individual restaurant pages with category-wise accordion menus.
 
 ## 🤔 How to use Bitesy?
 
-**Search for Restaurants**: Use the search bar to find specific restaurants or dishes.
+1. **Search for Restaurants**: Use the search bar to find specific restaurants or dishes.
+2. **Filter Results**: Apply filters to narrow down your choices based on cuisine, ratings, etc.
+3. **View Restaurant Menu**: Click on a restaurant to view its detailed menu categorized by type.
+4. **Add to Cart**: Select items and add them to your cart.
+5. **Checkout**: Review your cart and proceed to secure checkout.
+6. **Enjoy Your Meal**: Await your delicious meal to be delivered to your doorstep!
 
-**Filter Results**: Apply filters to narrow down your choices based on cuisine, ratings, etc.
 
-**View Restaurant Menu**: Click on a restaurant to view its detailed menu categorized by type.
-
-**Add to Cart**: Select items and add them to your cart.
-
-**Checkout**: Review your cart and proceed to secure checkout.
-
-**Enjoy Your Meal**: Await your delicious meal to be delivered to your doorstep!
-
+## 🙋‍♀️ Got Any Feedback?
 > ℹ️ Tip:
 > Use the filter options to quickly find top-rated dishes and the best deals in your area!
+##
+
 
 ## 📚 What I Learned
 
