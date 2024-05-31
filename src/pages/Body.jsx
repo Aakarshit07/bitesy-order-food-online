@@ -49,27 +49,26 @@ const Body = () => {
       <div className="flex justify-start items-center gap-4 m-4 px-10 py-4">
         <Carousel />
       </div>
-
-      <div className="flex flex-col items-start gap-4 m-4 px-10 py-4 mt-4 mb-12">
-        <h3 className="text-2xl font-bold mt-8 mb-14">
+      <div className=" flex flex-col items-start gap-4 m-4 px-3 py-4 mt-4 mb-12">
+        <h3 className=" text-2xl font-bold mt-8 mb-14">
           Top restraunts around you
         </h3>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center w-full  py-2 gap-1 sm:gap-4">
           <button
             onClick={handleAllFilter} 
-            className="font-mono py-2 px-4 text-lg bg-black text-white rounded-md shadow-xl text-center"
+            className="font-mono p-2  text-lg bg-black text-white rounded-md shadow-xl text-center"
           >
             ALL Restaurants
           </button>
           <button 
             onClick={handleTopRatedFilter}
-            className="font-mono py-2 px-4 text-lg bg-black text-white rounded-md shadow-xl text-center"
+            className="font-mono p-2  text-lg bg-black text-white rounded-md shadow-xl text-center"
           >
             Top Rated
           </button>
           <button 
             onClick={handleFastDeliveryFilter}
-            className="hidden sm:block font-mono py-2 px-4 text-lg bg-black text-white rounded-md shadow-xl text-center"
+            className="hidden sm:block font-mono p-2  text-lg bg-black text-white rounded-md shadow-xl text-center"
           >
             FAST DELIVERY
           </button>
@@ -81,7 +80,6 @@ const Body = () => {
           </button>
         </div>
       </div>
-      
       <div className="flex flex-wrap items-center justify-center gap-12 p-4">
         { 
           loading ? (
